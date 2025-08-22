@@ -1,24 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js E-commerce Application
+
+A modern e-commerce application built with Next.js, featuring user authentication, product management, and a responsive design.
+
+## Features
+- User authentication (Register/Login/Logout)
+- Product listing and details
+- Add products (admin)
+- Responsive design for all devices
+- Secure API routes
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18.0 or later
+- npm or yarn
+- MongoDB Atlas account
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/shafee-ullah/nextjs-app.git
+   cd nextjs-app
+   ```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Set up environment variables:
+   - Create a `.env.local` file in the root directory
+   - Add your MongoDB connection string and other required variables:
+     ```
+     MONGODB_URI=your_mongodb_connection_string
+     NEXTAUTH_SECRET=your_nextauth_secret
+     NEXTAUTH_URL=http://localhost:3000
+     ```
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Route Summary
+
+### Authentication
+- `/login` - User login page
+- `/register` - User registration page
+- `/api/auth/[...nextauth]` - NextAuth.js authentication API
+- `/api/auth/register` - User registration API
+
+### Products
+- `/products` - List all products
+- `/products/[id]` - View product details
+- `/dashboard/add-product` - Add new product (protected)
+- `/api/products` - Products API (GET/POST)
+
+### Other
+- `/` - Home page
+- `/api/test` - Test API endpoint for database connection
+
+## Development
+
+This project uses:
+- Next.js 14 with App Router
+- MongoDB for database
+- NextAuth.js for authentication
+- Tailwind CSS for styling
 
 ## Learn More
 
