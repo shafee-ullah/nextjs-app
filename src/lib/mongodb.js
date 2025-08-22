@@ -1,10 +1,10 @@
 import { MongoClient } from 'mongodb';
 
-if (!process.env.MONGODB_URI) {
+if (!process.env.NEXT_PUBLIC_MONGODB_URI) {
   throw new Error('Please add your MONGODB_URI to .env.local');
 }
 
-const uri = process.env.MONGODB_URI;
+const uri = process.env.NEXT_PUBLIC_MONGODB_URI;
 const options = {
   useUnifiedTopology: true,
   useNewUrlParser: true,

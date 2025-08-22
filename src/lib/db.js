@@ -1,6 +1,6 @@
 import { MongoClient } from 'mongodb';
 
-if (!process.env.MONGODB_URI) {
+if (!process.env.NEXT_PUBLIC_MONGODB_URI) {
   throw new Error('Please define the MONGODB_URI environment variable');
 }
 
