@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 
 async function testConnection() {
-  const uri = process.env.NEXT_PUBLIC_MONGODB_URI || 'mongodb+srv://nextjs_app:Q0UVmiSgqdzrsrVl@cluster0.8puxff9.mongodb.net/nextjs_auth?retryWrites=true&w=majority';
+  const uri = process.env.MONGODB_URI || 'mongodb+srv://nextjs_app:Q0UVmiSgqdzrsrVl@cluster0.8puxff9.mongodb.net/nextjs_auth?retryWrites=true&w=majority';
   
   console.log('Testing MongoDB connection with URI:', uri.replace(/:[^:]*@/, ':***@'));
   

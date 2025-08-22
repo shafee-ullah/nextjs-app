@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 require('dotenv').config();
 
 async function createTestUser() {
-  const uri = process.env.NEXT_PUBLIC_MONGODB_URI || 'mongodb+srv://nextjs_app:Q0UVmiSgqdzrsrVl@cluster0.8puxff9.mongodb.net/nextjs_auth?retryWrites=true&w=majority';
+  const uri = process.env.MONGODB_URI || 'mongodb+srv://nextjs_app:Q0UVmiSgqdzrsrVl@cluster0.8puxff9.mongodb.net/nextjs_auth?retryWrites=true&w=majority';
   const client = new MongoClient(uri);
 
   try {
