@@ -1,5 +1,6 @@
 import { ObjectId } from 'mongodb';
 import { connectToDatabase } from '@/lib/mongodb';
+import Link from 'next/link';
 
 export default async function ProductDetails({ params }) {
   const { id } = params;
@@ -13,7 +14,7 @@ export default async function ProductDetails({ params }) {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900">Product not found</h1>
-          <p className="mt-2 text-gray-600">The product you're looking for doesn't exist.</p>
+          <p className="mt-2 text-gray-600">The product you&apos;re looking for doesn&apos;t exist.</p>
         </div>
       </div>
     );
@@ -44,12 +45,12 @@ export default async function ProductDetails({ params }) {
             </dl>
           </div>
           <div className="px-4 py-4 bg-gray-50 text-right sm:px-6">
-            <a
+            <Link
               href="/products"
               className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               Back to Products
-            </a>
+            </Link>
           </div>
         </div>
       </div>
